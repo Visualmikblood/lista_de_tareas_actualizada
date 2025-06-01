@@ -1,0 +1,156 @@
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.busqueda-area input {
+  padding: 8px;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  transition: background 0.3s, border 0.3s;
+}
+
+.completada {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.tarea-item span {
+  flex: 1;
+}
+
+.tarea-item.completada span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.lista-tareas {
+  list-style: none;
+  padding: 0;
+}
+
+.lista-tareas li {
+  background: white;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  cursor: grab;
+}
+
+.lista-tareas li:active {
+  cursor: grabbing;
+}
+
+.lista-tareas li.arrastrando-sobre {
+  background-color: #e0f0ff;
+  border: 2px dashed #007bff;
+  transform: scale(1.02);
+}
+
+.lista-tareas li.arrastrando {
+  background-color: #d0e7ff;
+  border: 2px solid #3399ff;
+  cursor: grabbing;
+  transform: scale(1.02);
+}
+
+.lista-tareas li.completada span {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.lista-tareas input[type="checkbox"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.lista-tareas button {
+  background: #28a744;
+}
+
+.lista-tareas button:last-child {
+  background: #dc3545;
+}
+
+.lista-tareas button:hover {
+  opacity: 0.8;
+}
+
+.hora-tarea {
+  font-size: 1.1rem;
+  color: gray;
+  margin-top: 4px;
+}
+
+.drag-over {
+  border: 2px dashed #007bff;
+  background-color: #e9f5ff;
+}
