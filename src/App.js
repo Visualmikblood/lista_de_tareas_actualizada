@@ -70,7 +70,7 @@ function App() {
     e.dataTransfer.effectAllowed = 'move';
   };
 
-  const handleDragOver = (e, index) => {
+  const handleDragOver = (e, index) => {//tengo que acordarme que chatgpt me puede ayudar a hacer que el movimiento de las tareas sea mas fluido 
     e.preventDefault();
     if (index === tareaArrastrada) return;
 
