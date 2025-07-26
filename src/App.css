@@ -8,6 +8,78 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos para versión móvil */
+@media (max-width: 480px) {
+  .App {
+    max-width: 100vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow-x: hidden; /* Evitar scroll horizontal */
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .input-area input {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .input-area button {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .busqueda-area input {
+    width: 100%;
+    max-width: 100%;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .lista-tareas li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 8px;
+    word-break: break-word; /* Evitar overflow de texto largo */
+  }
+
+  .lista-tareas li span {
+    word-wrap: break-word;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    display: inline-block; /* Para que el max-width funcione correctamente */
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto; /* Para permitir guiones en palabras largas */
+    white-space: pre-wrap; /* Para respetar espacios y saltos de línea */
+  }
+
+  .lista-tareas li .hora-tarea {
+    font-size: 0.85rem;
+  }
+
+  .lista-tareas input[type="checkbox"] {
+    transform: scale(1);
+  }
+
+  .lista-tareas button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+}
+
 h1 {
   text-align: center;
   color: #333;
@@ -154,3 +226,12 @@ button:hover {
   border: 2px dashed #007bff;
   background-color: #e9f5ff;
 }
+
+
+/*a aprtir de aqui pongo el css de las actualizaciones de 06 de julio 2025 de las animaciones : Animación al soltar una tarea (drag & drop).
+
+Resalte al hacer drag over y quitarlo al hacer drag leave.
+
+Transición de desaparición al eliminar una tarea.
+
+Animación suave al marcar una tarea como completada (tachado y color).*/
